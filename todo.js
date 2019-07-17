@@ -1,11 +1,5 @@
-// var h =document.createElement('h1')
-// var myValue=document.createTextNode('Hello World!')
-// h.appendChild(myValue)
-// document.querySelector('h1').appendChild(h);
-
 var ul = document.getElementById('list')
 var li
-
 
 var addButton = document.getElementById('add')
 addButton.addEventListener('click', addItem);
@@ -16,15 +10,12 @@ removeButton.addEventListener('click', removeItem);
 var clearButton = document.getElementById('clearall')
 clearButton.addEventListener('click', clearItem);
 
-
 function addItem() {
     var input = document.getElementById('input');
     var item = input.value
     var textnode = document.createTextNode(item)
     var start = document.getElementById('Start')
     var enter = document.getElementById('Enter')
-
-
 
     if (item === '') {
         start.remove()
@@ -44,8 +35,6 @@ function addItem() {
 
     }
     else {
-
-
         //create li
         li = document.createElement('li')
         //create checkBox
@@ -71,13 +60,9 @@ function addItem() {
         start.remove()
         enter.remove()
     }
-
 }
-
-
 function removeItem() {
     li = ul.children
-
     for (let index = 0; index < li.length; index++) {
         // const element = li[index];
         // console.log(element);
@@ -88,6 +73,5 @@ function removeItem() {
 }
 function clearItem() {
     ul.remove();
-
 }
 
